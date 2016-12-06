@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE autores SYSTEM "Eurovision.dtd">
+<concurso>
+	<artistas>
+		<artista id = "Edurne">
+			<nombre>Edurne</nombre>
+			<imagen>
+			</imagen>
+			<descripcion>
+				Edurne García Almagro, más conocida como Edurne, es una cantante, modelo, presentadora
+				de televisión y actriz española. Se dio a conocer como finalista de la cuarta
+				temporada del talent show Operación Triunfo.
+			</descripcion>
+		</artista>
+		<artista id = "Lisa Angell">
+			<nombre>Lisa</nombre>
+			<imagen>
+			</imagen>
+			<descripcion>
+				Lisa Angell, nacida como Lisa Vetrano en París, Francia el 21 de septiembre de 1968,
+				es una cantante francesa que representará a Francia en el Festival de la Canción
+				de Eurovisión 2015
+			</descripcion>
+		</artista>
+		<artista id = "Il volo">
+			<nombre>Il volo</nombre>
+			<imagen>
+			</imagen>
+			<descripcion>
+				Il Volo es un grupo de música pop/lírico, compuesto por un trío de cantantes italianos
+				masculinos; Piero Barone, Ignazio Boschetto y Gianluca Ginoble.
+			</descripcion>
+		</artista>
+		<artista id = "Electro Velvet">
+			<nombre>Il volo</nombre>
+			<imagen>
+			</imagen>
+			<descripcion>
+				Electro Velvet es un dúo británico que representará a Reino Unido en el Festival de
+				la Canción de Eurovisión 2015 con la canción "Still in Love with You" . El grupo
+				está compuesto por los vocalistas Alex Larke y Bianca Nicholas.
+			</descripcion>
+		</artista>
+		<artista id = "Leonor Andrade">
+			<nombre>Leonor Andrade</nombre>
+			<imagen>
+			</imagen>
+			<descripcion>13 de septiembre de 1994 (edad 20)</descripcion>
+		</artista>
+	</artistas>
+	
+	<ediciones>
+		<edicion>
+			<anyo>2015</anyo>
+			<ciudad>Vienna</ciudad>
+			<lugar>Austria</lugar>
+			
+			<participantes>
+				<pais id = "ESP">
+				</pais>
+				<representante id = "Edurne"/>
+				<cancion>Amanecer</cancion>
+				<orden>1</orden>
+				<votos>
+					<voto pais = "ING" puntuacion = "12"/>
+					<voto pais = "FRA" puntuacion = "12"/>
+				</votos>
+			</participantes>
+			
+			<participantes>
+				<pais id = "FRA">
+				</pais>
+				<representante id = "Lisa Angell"/>
+				<cancion>N’oubliez pas</cancion>
+				<orden>2</orden>
+				<votos>
+					<voto pais = "ESP" puntuacion = "12"/>
+					<voto pais = "ITA" puntuacion = "9"/>
+				</votos>
+			</participantes>
+			
+			<participantes>
+				<pais id = "ITA">
+				</pais>
+				<representante id = "Il volo"/>
+				<cancion>Grande amore</cancion>
+				<orden>3</orden>
+				<votos>
+					<voto pais = "ESP" puntuacion = "7"/>
+					<voto pais = "FRA" puntuacion = "4"/>
+				</votos>
+			</participantes>
+			
+			<participantes>
+				<pais id = "ING">
+				</pais>
+				<representante id = "Electro Velvet"/>
+				<cancion>Still in love with you</cancion>
+				<orden>4</orden>
+				<votos>
+					<voto pais = "ESP" puntuacion = "6"/>
+					<voto pais = "ITA" puntuacion = "8"/>
+				</votos>
+			</participantes>
+			
+			<participantes>
+				<pais id = "POR">
+				</pais>
+				<representante id = "Leonor Andrade"/>
+				<cancion>Un mar que nos separa</cancion>
+				<orden>5</orden>
+				<votos>
+					<voto pais = "ESP" puntuacion = "1"/>
+					<voto pais = "FRA" puntuacion = "3"/>
+				</votos>
+			</participantes>
+		</edicion>
+		
+		<edicion>
+			<anyo>2014</anyo>
+			<ciudad>Madrid</ciudad>
+			<lugar>España</lugar>
+			
+			<participantes>
+				<pais id = "ESP">
+				</pais>
+				<representante id = "Il volo"/>
+				<cancion>Pasion</cancion>
+				<orden>2</orden>
+				<votos>
+					<voto pais = "ING" puntuacion = "2"/>
+					<voto pais = "FRA" puntuacion = "1"/>
+				</votos>
+			</participantes>
+			
+			<participantes>
+				<pais id = "FRA">
+				</pais>
+				<representante id = "Edurne"/>
+				<cancion>No te olvido</cancion>
+				<orden>1</orden>
+				<votos>
+					<voto pais = "ESP" puntuacion = "10"/>
+					<voto pais = "ITA" puntuacion = "4"/>
+				</votos>
+			</participantes>
+			
+			<participantes>
+				<pais id = "ITA">
+				</pais>
+				<representante id = "Lisa Angell"/>
+				<cancion>Cuore</cancion>
+				<orden>4</orden>
+				<votos>
+					<voto pais = "ESP" puntuacion = "7"/>
+					<voto pais = "FRA" puntuacion = "4"/>
+				</votos>
+			</participantes>
+			
+			<participantes>
+				<pais id = "ING">
+				</pais>
+				<representante id = "Leonor Andrade"/>
+				<cancion>Blue sky</cancion>
+				<orden>3</orden>
+				<votos>
+					<voto pais = "ESP" puntuacion = "6"/>
+					<voto pais = "ITA" puntuacion = "8"/>
+				</votos>
+			</participantes>
+			
+			<participantes>
+				<pais id = "POR">
+				</pais>
+				<representante id = "Electro Velvet"/>
+				<cancion>Grita</cancion>
+				<orden>5</orden>
+				<votos>
+					<voto pais = "ESP" puntuacion = "1"/>
+					<voto pais = "FRA" puntuacion = "3"/>
+				</votos>
+			</participantes>
+		</edicion>
+		
+	</ediciones>
+	
+</concurso>

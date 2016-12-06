@@ -1,0 +1,27 @@
+<!ELEMENT artistas (artista*)>
+<!ELEMENT artista (nombre, imagen?, descripcion?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT imagen (#PCDATA)>
+<!ELEMENT descripcion ANY>
+<!ATTLIST artista id ID #REQUIRED>
+
+<!ELEMENT ediciones (edicion*)>
+<!ELEMENT edicion (anyo, ciudad, lugar, participantes*)>
+<!ELEMENT anyo (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT lugar (#PCDATA)>
+<!ELEMENT participantes (pais,representante, cancion, orden, votos*)>
+<!ELEMENT pais EMPTY>
+<!ELEMENT representante EMPTY>
+
+<!ELEMENT cancion (#PCDATA)>
+<!ELEMENT orden (#PCDATA)> 
+<!ELEMENT votos (voto*)>
+<!ELEMENT voto EMPTY >
+
+<!ATTLIST representante id IDREF #REQUIRED>
+<!ATTLIST pais id CDATA #REQUIRED>
+<!ATTLIST voto pais CDATA #REQUIRED>
+<!ATTLIST voto puntuacion CDATA #REQUIRED>
+
+

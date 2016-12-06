@@ -1,0 +1,141 @@
+% Practica 4
+% ----------
+
+% RelaciÃ³n envia(Origen, Mensaje, Destino)
+
+envia(21, 27, 31).
+envia(21, 27, 42).
+envia(21, 27, 49).
+envia(21, 27, 3).
+envia(21, 27, 28).
+envia(21, 27, 99).
+envia(21, 27, 95).
+envia(21, 27, 10).
+envia(21, 27, 14).
+envia(21, 27, 21).
+envia(21, 27, 41).
+envia(25, 27, 44).
+envia(25, 27, 31).
+envia(41, 27, 30).
+envia(41, 27, 1).
+envia(41, 27, 5).
+envia(41, 27, 43).
+envia(41, 27, 2).
+envia(41, 27, 42).
+envia(41, 27, 4).
+envia(41, 27, 9).
+envia(41, 27, 21).
+
+envia(41, 3, 4).
+envia(4, 3, 31).
+envia(31, 3, 37).
+envia(31, 3, 29).
+
+
+envia(21, 14, 10).
+envia(21, 14, 15).
+envia(21, 14, 17).
+envia(23, 14, 9).
+envia(23, 14, 5).
+envia(25, 14, 10).
+envia(25, 14, 23).
+envia(25, 14, 21).
+envia(41, 14, 7).
+envia(41, 14, 64).
+envia(41, 14, 49).
+envia(48, 14, 7).
+envia(48, 14, 24).
+envia(48, 14, 6).
+envia(49, 14, 25).
+envia(49, 14, 21).
+envia(49, 14, 10).
+envia(64, 14, 21).
+envia(64, 14, 10).
+envia(64, 14, 5).
+envia(39, 14, 45).
+envia(39, 14, 4).
+envia(39, 14, 5).
+envia(22, 14, 87).
+envia(22, 14, 91).
+envia(22, 14, 32).
+envia(25, 14, 35).
+envia(25, 14, 91).
+envia(25, 14, 32).
+envia(75, 14, 89).
+envia(75, 14, 93).
+envia(75, 14, 3).
+envia(26, 14, 89).
+envia(26, 14, 6).
+envia(26, 14, 33).
+envia(91, 14, 21).
+envia(91, 14, 23).
+envia(91, 14, 25).
+envia(91, 14, 41).
+envia(91, 14, 48).
+envia(91, 14, 49).
+envia(91, 14, 64).
+envia(91, 14, 39).
+envia(91, 14, 22).
+envia(91, 14, 25).
+envia(91, 14, 75).
+envia(91, 14, 26).
+envia(93, 14, 21).
+envia(93, 14, 23).
+envia(93, 14, 25).
+envia(93, 14, 41).
+envia(93, 14, 48).
+envia(93, 14, 49).
+envia(93, 14, 64).
+envia(93, 14, 39).
+envia(93, 14, 25).
+envia(93, 14, 75).
+envia(93, 14, 26).
+
+
+envia(7, 19, 4).
+envia(7, 19, 5).
+envia(4, 19, 1).
+envia(1, 19, 3).
+envia(1, 19, 7).
+
+
+% icono_azul(Usuario)
+ icono_azul(Origen) :-
+ 	group_by(
+ 		envia(Origen, 27, NumPersonas),
+ 		[Origen],
+ 		count(NumPersonas) >= 10
+ 		).
+ 
+% triple_arco_iris(X) (Usuario)	FUNCIÓN PRINCIPAL		
+triple_arco_iris(X) :-
+ 	group_by(
+ 		envia(X, 14, NumPersonas),
+ 		reenvio_doble(NumPersonas),
+ 		[X],
+ 		count(NumPersonas) >= 10
+ 		).
+		
+% reenvio_doble(Origen)	FUNCIÓN AUXILIAR DONDE SACAMOS AQUELLOS DESTINATARIOS QUE HAN REENVIADO EL MENSAJE
+ reenvio_doble(Origen) :-
+ 	group_by(
+ 		envia(Origen, 14, NumPersonas),
+ 		[Origen],
+ 		count(NumPersonas) >= 3
+ 		).
+
+
+% fortuna_usuario(Usuario, CantidadDinero) FUNCIÓN PRINCIPAL
+fortuna_usuario(Origen, Cantidad) :-
+ 	group_by(
+ 		rel_aux(Origen, Destino),
+ 		[Origen],
+ 		Cantidad is count(Destino)*245
+ 		).  
+% rel_aux(X,Y)	FUNCIÓN AUXILIAR QUE SACA TODOS AQUELLOS USUARIOS QUE HAN ENVIADO EL MENSAJE 19 
+rel_aux(X,Y) :- envia(X,19,Y).
+rel_aux(X,Y) :- envia(X,19,Z),envia(Z,19,Y).
+rel_aux(X,Y) :- envia(X,19,A),envia(A,19,Z),envia(Z,19,Y), X \= Y.
+	
+ 	
+ 
